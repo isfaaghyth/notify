@@ -15,8 +15,8 @@ object Notify {
     private val TAG = "Notify"
     private val subject: Subject<Any> = PublishSubject.create()
 
-    fun <T> listen(tClass: Class<T>, subscriber: SchedulerProvider,
-                     onNext: Consumer<T>, onError: Consumer<Throwable>): Disposable {
+    fun <T> listen(tClass: Class<T>, subscriber: EventProvider,
+                   onNext: Consumer<T>, onError: Consumer<Throwable>): Disposable {
         Log.d(TAG, tClass.name)
         return subject
                 .subscribeOn(subscriber.io())
