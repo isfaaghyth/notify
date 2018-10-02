@@ -4,19 +4,19 @@
 ### installation
 Step 1. Add the JitPack repository to your build file
 ```javascript
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+   allprojects {
+      repositories {
+         ...
+         maven { url 'https://jitpack.io' }
+      }
+   }
 ```
 
 Step 2. Add the dependency
 ```javascript
-	dependencies {
-	        implementation 'com.github.isfaaghyth:notify:1.0'
-	}
+   dependencies {
+      implementation 'com.github.isfaaghyth:notify:1.0'
+   }
 ```
 
 ### how to use it?
@@ -24,7 +24,7 @@ Step 2. Add the dependency
 send notify
 
 ```java
-	Notify.send("Hai")
+   Notify.send("Hai")
 ```
 
 subscriber
