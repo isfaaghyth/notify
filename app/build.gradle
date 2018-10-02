@@ -28,6 +28,9 @@ dependencies {
     compile 'com.android.support:appcompat-v7:27.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'io.reactivex.rxjava2:rxjava:2.2.2'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile project(':notify')
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 repositories {

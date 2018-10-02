@@ -26,6 +26,17 @@ object Notify {
                 .subscribe(onNext, onError)
     }
 
+    fun <T> listen(tClass: Class<T>, subscriber: EventProvider,
+                   onNext: Consumer<T>): Disposable {
+        Log.d(TAG, tClass.name)
+        return subject
+                .subscribeOn(subscriber.io())
+                .observeOn(subscriber.mainThread())
+                .filter { o -> o.javaClass == tClass }
+                .map { o -> o as T }
+                .subscribe(onNext)
+    }
+
     /**
      * unused @TODO(backup)
      */
