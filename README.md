@@ -33,7 +33,7 @@ subscriber
 
 ```java
   composite.add(Notify.listen(String::class.java, NotifyProvider(), Consumer {
-      person -> textView.text = person.name
+      person -> Log.d("Notify", person.name)
   }))
 ```
 
@@ -41,9 +41,9 @@ or with throwable like this
 
 ```java
   composite.add(Notify.listen(String::class.java, NotifyProvider(), Consumer {
-      person -> textView.text = person.name
+      person -> Log.d("Notify", person.name)
   }, Consumer {
-      t -> Log.e(TAG, t.message)
+      t -> Log.e("Notify", t.message)
   }))
 ```
 
