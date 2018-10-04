@@ -1,6 +1,8 @@
 # notify
 📮 a micro-library to simplifies a simple communication between activity, fragment, services, etc. through reactive-pattern.
 
+![](https://raw.githubusercontent.com/isfaaghyth/notify/master/notifyflow.png)
+
 ### installation
 Step 1. Add the JitPack repository to your build file
 ```javascript
