@@ -33,7 +33,7 @@ subscriber
 
 ```java
   composite.add(Notify.listen(String::class.java, NotifyProvider(), Consumer {
-      person -> Log.d("Notify", person.name)
+      result -> Log.d("Notify", result)
   }))
 ```
 
@@ -41,7 +41,7 @@ or with throwable like this
 
 ```java
   composite.add(Notify.listen(String::class.java, NotifyProvider(), Consumer {
-      person -> Log.d("Notify", person.name)
+      result -> Log.d("Notify", result)
   }, Consumer {
       t -> Log.e("Notify", t.message)
   }))
