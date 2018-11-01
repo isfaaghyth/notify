@@ -47,4 +47,8 @@ or with throwable like this
   }))
 ```
 
+### License
+
+MIT
+
 cheers!
