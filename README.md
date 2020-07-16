@@ -51,7 +51,7 @@ or with throwable like this
   composite.add(Notify.listen(String::class.java, NotifyProvider(), Consumer {
       result -> Log.d("Notify", result)
   }, Consumer {
-      t -> Log.e("Notify", t.message)
+      err -> Log.e("Notify", err.message)
   }))
 ```
 
